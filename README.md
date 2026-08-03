@@ -26,6 +26,7 @@ Bot tự tạo bảng `love_bot_state`. Nếu bảng chưa có dữ liệu, bot 
 - Trạng thái: **Đang tìm hiểu → Đang yêu (30 điểm) → Đính hôn (150 điểm) → Kết hôn (300 điểm)**.
 - `.chiatay`: hiện nút xác nhận, có GIF; dữ liệu cũ được lưu vào nhật ký gần nhất.
 - `.profile`, `.anniversary`, `.thanmat`, `.nhatky`, `.tuongtac`, `.toplove`.
+- `.timduyen [@user]`: quét thành viên thật và tìm top điểm ship, gồm kết quả 100% nếu có.
 
 ## Tương tác
 
@@ -56,3 +57,12 @@ Dùng `.help` trong Discord để xem danh sách rút gọn.
 
 Nguồn GIF chính: [nekos.best API](https://docs.nekos.best/getting-started/api-reference.html).
 Dữ liệu chính được lưu trong PostgreSQL. Ba file JSON chỉ còn là nguồn nhập dữ liệu cũ hoặc fallback khi chưa cấu hình `DATABASE_URL`.
+## Casino
+
+- `.dailytx`: nhận vốn casino riêng mỗi ngày, có chuỗi 7 ngày.
+- `.coin`: xem số dư và thống kê.
+- `.tx tai|xiu <coin>` · `.coinflip ngua|sap <coin>` · `.slots <coin>`
+- `.roulette do|den|chan|le|0-36 <coin>` · `.dice <số 1-6> <coin>`
+- Có thể cược bằng số coin, `half` hoặc `all`. Dữ liệu lưu cùng PostgreSQL.
+- Gõ `.help` rồi chọn **Cờ bạc** hoặc **Tình yêu**.
+
